@@ -1,0 +1,236 @@
+@import "shorts.less";
+
+
+/*************
+  MIN 992px
+*************/
+
+@media only screen and (min-width: 992px) {
+  .carousel {.dn; visibility: hidden!important; }
+}
+
+/**************
+  MAX 1200px
+**************/
+
+@media only screen and (max-width: 1200px) {
+
+  /* --> ABOUT US <-- */
+  section.about {
+    .item {width: 290px !important;
+    br {display: none;}
+    }
+  }
+
+  /* --> THE TEAM <-- */
+  section.team {
+    header {margin-bottom: 75px;}
+    .item { height: 145px;width: 290px!important;
+        .info {width: 50%;height: auto;display: inline-block;position: relative;box-sizing: border-box;    padding: 15px 15px 0; line-height: 24px;}
+        .photo {width: 50%;height: auto;}
+        img {width: 100%;height: 145px;display: block;}
+    }
+    /* flip */
+    .flip {perspective: 800; position: absolute; text-align: center;transition: 0.5s all ease; text-align: center;
+      .on {opacity: 1!important;
+        &:before {content:'';    padding-right: 0px; }
+      }
+      .card.flipped { transform: rotatey(-180deg); background: linear-gradient( -135deg, rgba(14,18,20,.9) 0%, rgba(30,36,43,.9) 100%);transition: 0.5s all ease; }
+      .card {        width: 290px;height: 145px;
+        .back {  padding: 0 25px; lefT:0; }
+        .quote_top {font-size: 12px;color:#484d52; font-family: 'Montserrat'; text-transform: uppercase; display: block;    padding: 20px 0 15px; font-weight: bold;}
+        .quote_bottom {font-size: 18px; color: white; font-family: 'Merriweather'; font-style: italic;text-transform: none;line-height: 24px;}
+      }
+    }
+  }
+
+  /* --> CONTACT <-- */
+  section.contact {
+   // .container {    width: 100%;max-width: 100%;}
+  }
+}
+
+
+/*************
+  MAX 992px
+*************/
+
+@media only screen and (max-width: 992px) {
+
+  .on { .pa; .wa; .ha; .dbl;
+    &:before {content:'X'; padding-right: 8px; }
+  }
+
+  .navbg, .moj-sticky-header-shrink {background: #161b20!important; }
+  .moj-sticky-header-shrink {   height: 60px;
+
+  }
+  .menu {    right: 13px!important;top: 13px!important;}
+  .brand {    width: 35px;height: 35px;background-size: 100%;top: -1px!important;left: 2px!important;background-position: left top;}
+  button.navbar-toggler {        position: absolute;right: 30px;top: 22px;z-index: 1000000000;font-size: 12px;color: #fff;padding: 9px;letter-spacing: 0.5px;border: 1px white solid!important;outline: none;}
+  .logo { top: -8px;left: 10px;}
+  .container {padding: 36px 0 0 0!important; }
+  .hide {display: none!important; visibility: hidden!important; }
+  .row {margin: 0 !important;}
+
+
+  /* --> NAVIGATION <-- */
+  nav {
+    .container {padding: 0!important;}
+    .navbar-collapse {    background: #161b20;.w1;.pa;.m0; .h530; left: 0;top: 60px;.tac;-webkit-transform: perspective(1500px);-webkit-transform-style: preserve-3d; opacity:0; transition: .7s all ease;-webkit-transform-origin: 50% 0;-webkit-filter: blur(20px);filter: blur(20px);}
+      ul {.m0a;.dibl;.pr;.w1;left: 0;    top: 45px;
+        li {.m0;.p0;
+          a {    padding: 0!important;margin: 0!important;line-height: 40px;.ft24; .w1;.h1;.dbl;}
+        }
+      }
+
+  .show {opacity:1!important;-webkit-filter: blur(0px);filter: blur(0px);}
+  .collapsing {-webkit-transform: perspective(500px) rotateX(90deg) translateY(150px);}
+  }
+
+  /* --> HERO <-- */
+  header.hero { .w1; .h530; .dibl; .pr; .fnt1; .tac; .cw; .ttu;    background-position: 35% -1px;
+    h1 { width: 90%; margin: 161px auto 9px; .ft30; letter-spacing: 1.2px; line-height: 34px; position: relative;
+      small {.dbl; .pr; .ft16;;font-weight: bold;font-style: normal;top: 6px;letter-spacing: .65px;left: -2px; }
+    }
+    br { display: initial!important; }
+    &:after {content: ' '; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; background: url(../img/header2a.jpg) no-repeat -261px 1px;background-size: 340%; }
+    .button {.ft12; width: 180px;line-height: 40px;top: 46px;letter-spacing: 0.6px;}
+  }
+
+  /* --> ABOUT US <-- */
+  section.about   { .w1; .h1107; background: #dfdfe1; .tac;
+      .row {
+        div:nth-child(2) br {display: none;}
+      }
+    header {
+      h2 {.ft24; margin: 0 0 22px 0;letter-spacing: 1px;position: relative;left: -8px;}
+      span {.ft14; .dbl; line-height: 18px;letter-spacing: 0.5px;    padding: 0 22px;}
+    }
+    p {font-size: 12px;line-height: 19px;padding: 24px 22px 0;letter-spacing: -0.05px;}
+    .item { height: 258px;box-sizing: border-box;border-radius: 3px;box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);background: #fcfcff;width: 290px;margin: 49px auto 3px;
+      .icon {width:62px; height: 62px; .dibl; .pr; border-radius: 40px; background:@ylw; top: -32px;
+        span {top: 15px;background-size: 80%;background-repeat: no-repeat;left: 4px;}
+      }
+      h3 {.pr; .ft18; top: 0px;letter-spacing: .33px;left: 1px; }
+    }
+  }
+
+  /* --> THE TEAM <-- */
+  section.team {.w1;.h500;.tac;.cw;
+    .row:nth-child(2) {padding-bottom: 30px;}
+    &:before {content: ' '; display: block; position: absolute; left: 0; .w1; .h500; z-index: -1; opacity: 0.25;   background: url('../img/stars2.jpg') no-repeat center; background-size: cover;}
+    header {
+      h2 {.ft24; margin: 0 0 22px 0;letter-spacing: 1px; }
+      span {.ft14; .dbl; line-height: 18px;letter-spacing: 0.5px;}
+    }
+    .item {width: 320px!important; height:173px; display: inline-block;box-sizing: border-box;
+      .photo {width: 173px;
+        img {    width: 173px;height: 173px;display: inline-block;float: right;}
+      }
+      .info {width: 45.5%;padding: 48px 15px 0;line-height: 24px;
+        .name {font-size: 14px;    line-height: 18px; padding-bottom: 5px;}
+        .job {.ft10; padding-bottom: 7px; }
+        .detail {.ft10;line-height: 12px;}
+      }
+      .flip .card {
+        width: 320px;
+        height: 173px;
+      }
+    }
+    .carousel {top:-17px;}
+    .carousel-control-prev, section.team .carousel-control-next {top:190px; margin: 0 13px;}
+    .carousel-control-next { margin-right: 24px;}
+    .carousel-indicators {bottom:44px;}
+    .carousel-indicators li {    margin-right: 5px;margin-left: 5px;}
+  }
+
+  /* --> GALLERY <-- */
+
+  section.gallery {.w1;.h672;.tac;.cw;
+    header {
+      h2 {.ft24; margin: 0 0 24px 0;letter-spacing: 1px;position: relative; padding: 0 22%;}
+      span {.ft14; .dbl; line-height: 18px;letter-spacing: 0.5px; padding: 0 13%;}
+    }
+    .item {width:100%; height: 100% ; .pr; .dbl;
+      img {width: 100%; height: auto; .dtb; }
+    }
+    .row {width:66%; margin: 50px auto 0!important;}
+
+  }
+
+  /* --> CONTACT <-- */
+
+  section.contact { .w1; .h720; background: #acb1b6; .tac;
+
+       // .container {width: auto; max-width: 100%;}
+
+    header {
+      h2 {.ft24; margin: 0 0 24px 0;letter-spacing: 1px;position: relative; padding: 0 22%;}
+      span {.ft14; .dbl; line-height: 18px;letter-spacing: 0.5px; padding: 0 13%;}
+    }
+    form {    box-sizing: border-box;padding-top:30px;
+      input,textarea {.input-grad;border:0;outline: none;.ft14;color:#acb1b6;padding: 18px 20px;font-weight: 400;}
+      input {width:100%; .dibl; margin-bottom: 21px; height: 45px; .br5; box-sizing: border-box;}
+      textarea {width:100%; .dibl; height: 177px;.br5; letter-spacing: .24px;padding: 15px 19px;}
+      .button {    top: 67px;line-height: 64px;letter-spacing: .4px;height: 60px;}
+    }
+  }
+
+
+}
+
+/*************************
+  MIN 767px -> MAX 992px
+*************************/
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  /* --> THE TEAM <-- */
+  section.about {     padding-bottom: 30px!important; .ha!important;
+    //.container {    max-width: 100%!important;}
+    .item {width: 100%!important;
+      br {display: none;}
+
+    }
+  }
+  /* --> GALLERY <-- */
+  section.gallery {height: 420px;
+    ul#lightgallery {margin: 70px auto 0!important;}
+    .item {width: 100%!important; height: 100%!important;}
+  }
+
+  section.contact {
+  // .container {width: auto;max-width: 576px;}
+
+  }
+
+}
+
+/*************
+  MAX 575px
+*************/
+
+@media only screen and (max-width: 575px) {
+  .col-xs-4 {    display: inline-block;padding-bottom: 6%;width: 33%;}
+
+  /* --> ABOUT US <-- */
+  section.about {
+    .item {
+      br {display: block!important;}
+    }
+  }
+
+  /* --> GALLERY <-- */
+  section.gallery {
+    header {margin-bottom: 46px;}
+    ul#lightgallery {width: 345px;
+      [class*="col-"] {padding:0 12px 20px 13px!important;}
+      .item {width:92px!important; height:92px!important;}
+    }
+    .row {max-height: initial;margin: 0 auto!important; width: 100%;}
+  }
+  section.contact {
+    form {width: 80%;margin: 0 auto;}
+  }
+
+}
